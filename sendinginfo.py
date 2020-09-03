@@ -7,7 +7,7 @@ def addNewUserToDb():
     surname = surname_validation()
     email = email_validation()
     User(UniqeId, name, surname, email)
-    print("you are registered succesfully")
+    print("Students imformation is stored succesfully")
 
 
 
