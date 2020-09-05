@@ -10,31 +10,50 @@ def getDataFromJsonFile(_fileName):
 
 data=getDataFromJsonFile("db.json")
 def ChangeStudentsData():
-        x = False
-        ID = int(input("student's ID: "))
         for dicts in data:
-            if ID == dicts["id"]:
-                x = True
-        if x== False:
-            print("Invalid ID,Try Again")
-            return
-        
-        commandOne=input("Do you want to change this student's name?...'Type yes or not':" )
+            while True:
+                ID=int(input("student's ID:"))
+                if ID==dicts["id"]:
+                    print("entered succesfuly")
+                    break
+                else:
+                    print("invalid ID,Try again")
+
+            break
+
+        while True:
+            commandOne = input("Do you want to change this student's name?...'Type yes or not':")
+            x = "yes"
+            y = "no"
+            if commandOne == x or commandOne == y:
+                break
+            else:
+                print("type right command")
 
         if commandOne=="yes":
             newName=name_validation()
             for dicts in data:
-                if ID == dicts["id"]:
+                if ID== dicts["id"]:
                     dicts["name"] =newName
                     print("updated succesfully")
-        commandTwo=input("Do you want to change this student's surname?...'Type yes or not':" )
+        while True:
+            commandTwo = input("Do you want to change this student's name?...'Type yes or not':")
+            if commandTwo == x or commandTwo == y:
+                break
+            else:
+                print("type right command")
         if commandTwo=="yes":
             NewSurname=surname_validation()
             for dicts in data:
-                if ID == dicts["id"]:
+                if ID== dicts["id"]:
                     dicts["surname"]=NewSurname
                     print("updated succesfully")
-        commandTree = input("Do you want to change this student's email?...'Type yes or not':")
+        while True:
+            commandTree = input("Do you want to change this student's name?...'Type yes or not':")
+            if commandTree == x or commandTree == y:
+                break
+            else:
+                print("type right command")
         if commandTree=="yes":
             NewEmail=email_validation()
             for dicts in data:
