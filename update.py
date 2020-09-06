@@ -37,7 +37,7 @@ def ChangeStudentsData():
                     dicts["name"] =newName
                     print("updated succesfully")
         while True:
-            commandTwo = input("Do you want to change this student's name?...'Type yes or not':")
+            commandTwo = input("Do you want to change this student's surname?...'Type yes or not':")
             if commandTwo == x or commandTwo == y:
                 break
             else:
@@ -49,7 +49,7 @@ def ChangeStudentsData():
                     dicts["surname"]=NewSurname
                     print("updated succesfully")
         while True:
-            commandTree = input("Do you want to change this student's name?...'Type yes or not':")
+            commandTree = input("Do you want to change this student's email?...'Type yes or not':")
             if commandTree == x or commandTree == y:
                 break
             else:
