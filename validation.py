@@ -13,12 +13,15 @@ def email_validation():
     return email
 
 def id_validation():
-    UniqID=random.randint(1, 101)
-    print("Student's ID "+str(UniqID))
-    for  info in data:
-            if info["id"]==UniqID:
-                print("This ID is used! Try again")
-                id_validation()
+      while True:
+        UniqID=random.randint(1, 101)
+        print("Student's ID "+str(UniqID))
+        if any(info["id"]==UniqID for info in data):
+            print("This ID is used! Try again")
+        else:
+            break
+        
+                
     return UniqID
 
 
